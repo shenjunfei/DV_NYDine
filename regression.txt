@@ -1,6 +1,76 @@
 
 
 Call:
+lm(formula = degree ~ yelping_since + votes + fans, data = df_ctrl)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.16291 -0.05161 -0.02223  0.01710  0.41705 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.187e+01  1.238e+01   2.574   0.0118 *  
+yelping_since -1.585e-02  6.172e-03  -2.567   0.0120 *  
+votes          1.289e-06  1.050e-06   1.227   0.2234    
+fans           3.311e-04  7.053e-05   4.695 1.04e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08927 on 83 degrees of freedom
+Multiple R-squared:  0.5686,	Adjusted R-squared:  0.553 
+F-statistic: 36.47 on 3 and 83 DF,  p-value: 3.922e-15
+
+
+
+Call:
+lm(formula = closeness ~ votes + fans + yelping_since + review_count + 
+    compliments, data = df_ctrl)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.105449 -0.021265 -0.003119  0.015061  0.170518 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    3.050e+01  6.557e+00   4.652 1.26e-05 ***
+votes          2.046e-06  1.204e-06   1.699 0.093088 .  
+fans           1.650e-04  4.242e-05   3.890 0.000205 ***
+yelping_since -1.497e-02  3.269e-03  -4.580 1.66e-05 ***
+review_count   4.869e-06  1.174e-05   0.415 0.679352    
+compliments   -6.688e-06  4.612e-06  -1.450 0.150860    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0471 on 81 degrees of freedom
+Multiple R-squared:  0.5725,	Adjusted R-squared:  0.5461 
+F-statistic: 21.69 on 5 and 81 DF,  p-value: 1.024e-13
+
+
+
+Call:
+lm(formula = betweenness ~ fans + yelping_since + votes + compliments, 
+    data = df_ctrl)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.042488 -0.004103 -0.000484  0.001901  0.170936 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    2.122e+00  2.999e+00   0.708  0.48125    
+fans           1.187e-04  1.886e-05   6.294 1.44e-08 ***
+yelping_since -1.059e-03  1.495e-03  -0.708  0.48091    
+votes          1.429e-06  4.409e-07   3.241  0.00172 ** 
+compliments   -6.406e-06  1.831e-06  -3.498  0.00076 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.02155 on 82 degrees of freedom
+Multiple R-squared:  0.588,	Adjusted R-squared:  0.5679 
+F-statistic: 29.26 on 4 and 82 DF,  p-value: 4.077e-15
+
+
+Call:
 lm(formula = eigenvector ~ fans + yelping_since + votes + review_count + 
     compliments, data = df_ctrl)
 
@@ -16,7 +86,7 @@ yelping_since -4.001e-02  1.086e-02  -3.683 0.000415 ***
 votes          6.537e-06  4.001e-06   1.634 0.106207    
 review_count  -8.373e-06  3.901e-05  -0.215 0.830588    
 compliments   -2.418e-05  1.533e-05  -1.578 0.118576    
-
+---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 0.1565 on 81 degrees of freedom
