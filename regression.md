@@ -16,7 +16,7 @@ yelping_since -4.001e-02  1.086e-02  -3.683 0.000415 ***
 votes          6.537e-06  4.001e-06   1.634 0.106207    
 review_count  -8.373e-06  3.901e-05  -0.215 0.830588    
 compliments   -2.418e-05  1.533e-05  -1.578 0.118576    
----
+
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 Residual standard error: 0.1565 on 81 degrees of freedom
