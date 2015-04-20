@@ -193,7 +193,7 @@ fit2 <- lm(data = df_ctrl,closeness ~ votes  + fans +compliments)
 summary(fit2)
 fit2 <- lm(data = df_ctrl,closeness ~ votes  + fans +yelping_since+ review_count + compliments)
 summary(fit2)
-
+plot(fit2)
 ```
 
 ```{r regression 3}
@@ -201,6 +201,7 @@ fit3 <- lm(data = df_ctrl,betweenness ~ review_count + fans )
 summary(fit3)
 fit3 <- lm(data = df_ctrl,betweenness ~  fans + yelping_since + votes + compliments)
 summary(fit3)
+plot(fit3)
 ```
 
 ```{r regression 4}
@@ -208,6 +209,8 @@ fit4 <- lm(data = df_ctrl,eigenvector ~ fans  )
 summary(fit4)
 fit4 <- lm(data = df_ctrl,eigenvector ~ fans +yelping_since+ votes + review_count + compliments)
 summary(fit4)
+plot(fit4)
+
 ```
 
 
