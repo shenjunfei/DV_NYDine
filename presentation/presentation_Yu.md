@@ -77,10 +77,10 @@ Information includes:
 
 * Circle Layout
 
-
 places the vertices on a unit circle equidistantly. It has no paramaters.
 
-
+    pl
+    
 * Sphere Layout
 
 
