@@ -244,4 +244,8 @@ V(g)$label.cex <- 2^(V(g)$average_stars)/15
 
 
 plot(g,layout=l)
+plot(g,layout=layout.random)
+plot(g,layout=layout.fruchterman.reingold)
+tkplot(g)
 ```
+
