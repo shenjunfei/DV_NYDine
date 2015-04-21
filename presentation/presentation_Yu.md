@@ -50,7 +50,8 @@ Information includes:
 
 ### - Ugly Network Representation... 
 
-![network graph 1](https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_v0.png) 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_v0.png" width="500" height="400">
+
 
 ### - Do better? 
 
@@ -64,23 +65,21 @@ edge betweenness score: measures the number of shortest paths through it.
 
 Modules which are densely connected themselves but sparsely connected to other modules.
 
-![network graph 2](https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_betweenness_v1.png) 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_betweenness_v1.png" width="500" height="400">
 
-
-*walktrap communities:
+* walktrap communities:
 
 Communities in a graph via random walks. The idea is that short random walks tend to stay in the same community.
 
-![network graph 3](https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_walktrap_v2.png) 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_walktrap_v2.png" width="500" height="400">
 
-
-*label propagation communities:
+* label propagation communities:
 
 An effective method for community detection in large-scale complex networks.
 
 IT works by labeling the vertices with unique labels and then updating the labels by majority voting in the neighborhood of the vertex.
 
-![network graph 4](https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_propagation_v3.png) 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_propagation_v3.png" width="500" height="400">
 
 
 ##  1.2 Ego Network

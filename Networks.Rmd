@@ -8,11 +8,17 @@ output: html
 I have an undirected unvalued social network of 87 yelp users with attributes on them. I got the original data from Yelp’s Academic Dataset website (https://www.yelp.com/academic_dataset). The information about 366715 yelp users can be found in the contained .json file “yelp_academic_dataset_user.json”. Information includes 1) user’s name; 2) user’s yelp id; 3) when did the user start using yelp; 4) votes the user received across all his/her reviews; 5) compliments the user received form other yelp users; 6) average rating the user gave to businesses; 7) how many fans the user have; 8) who is the user befriend with (will explain in more details later). Given the huge size of the original network, I applied a sampling process to get a sample graph of size 87, with everybody in this network at least connected to 4 of the others. All the data massage including extracting data, data cleaning, and sampling are done in python, the attribute data and adjacency matrix is obtained using my python script as well.
 I’ll skip the python part of data cleaning, the formatted data I’m using in R are from two .csv files – one is the attributes information for each one of the 87 users, the other is an adjacency matrix describing the connection between users in the network. 
 Here are the explanations for the attributes of nodes in the network:
+
 *“yelping_since”: in which year the user started using yelp, the original data has this variable coded as “yyyy-mm”, here I only extracted the “year” (“yyyy”), and it ranges from “2004” to “2011”;
+
 *“votes”: the count for votes the user received across all his/her reviews. I am counting the aggregate votes for “funny”, “useful” and “cool” altogether. 
+
 *“review_count”: the count for reviews the user wrote for all businesses. 
+
 *“fans”: number of fans the user have. Fans are people who follow the user but are not followed back by the user.
+
 *“average_stars”: average value of “stars” the user gave to all restaurants, ranges from 1 to 5.
+
 *“compliments”: count for compliment the user received from other users.
 
 
@@ -123,12 +129,16 @@ Even though I still think it’s problematical to directly use the attributes fr
 
 •  “yelping_since”: as the year become smaller, degree measure should become more central.
 The more time the user has been using yelp, the more friends he/she has. I would assume a new user should always have less connections compared with an older user. However, it doesn’t necessarily make him/her a more important person in the network, even to some degree and some cased it will, we will see.
+
 •	“votes” and “compliments”: as the number become bigger, degree and closeness measures should become more central.
 “vote” and “compliments” are the response the user received from other users on Yelp, thus indicate how influential the user is in the network. As the person become more influential, I think the measures on degree and closeness would all become larger, however I need to find out if betweenness and eigenvector would become larger as well.
+
 •	 “review_count”: as the number becomes bigger, degree and betweenness measures would become bigger as well.
 Number of review indicates how active the user is on Yelp. I would assume the more active the user is, the more likely he/she is acting as the information spreader.
+
 •	“fans”: as the number becomes bigger, degree, closeness, betweenness and eigenvector would all become bigger.
 The number of fans the person has on social network site is considered the most powerful, who is the most influential, a good information spreader and usually better connected to other well-connected person as well.
+
 •	 “average_stars”: not necessarily has influence on centrality measures.
 
 ```{r chart}
@@ -230,7 +240,8 @@ V(g)[V(g)$compliments>500]$color <- "red"
 V(g)$size <- sqrt(V(g)$fans)/2
 
 # lable size: average star
-V(g)$label.size <- sqrt(5^(V(g)$average_stars))
+V(g)$label.cex <- 2^(V(g)$average_stars)/15
+
 
 plot(g,layout=l)
 ```
