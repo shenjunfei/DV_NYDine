@@ -1,3 +1,14 @@
+
+---
+title: "Final Project Presentation - network and clustering"
+author: "Yu Tian"
+date: "Thursday, April 23, 2015"
+output: html_document
+layout: post
+description: Final Project
+---
+
+
 Learn about Yelp Users and Businesses
 --------
 
@@ -22,7 +33,7 @@ This is a network of 87 yelp users, where everybody is connected to at least 4 o
 
 Download original data from [Yelp's Academic Dataset website] (https://www.yelp.com/academic_dataset). 
 
-Information about 366715 yelp users can be found in the contained .json file "yelp_academic_dataset_user.json".
+Information about 366715 yelp users can be found in the contained .json file "yelp_academic_dataset__user.json".
 
 Information includes: 
 
@@ -55,7 +66,47 @@ Information includes:
 
 ### - Do better? 
 
-**A. community structure in networks**
+**A. Use Other Layout**
+
+* Random Layout:
+
+    plot(g,layout=layout.random)
+
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_random_v5.png" width="500" height="400">
+
+* Circle Layout
+
+
+places the vertices on a unit circle equidistantly. It has no paramaters.
+
+
+* Sphere Layout
+
+
+places the vertices (approximately) uniformly on the surface of a sphere, this is thus a 3d layout. 
+
+
+
+* Fruchterman Reingold Layout:
+
+Their purpose is to position the nodes of a graph in two-dimensional or three-dimensional space so that all the
+edges are of more or less equal length and there are as few crossing edges as possible, by assigning forces among
+the set of edges and the set of nodes, based on their relative positions, and then using these forces either to
+simulate the motion of the edges and nodes or to minimize their energy.
+
+
+    plot(g,layout=layout.random)
+
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_fruchterman.reingold_v6.png" width="500" height="400">
+
+
+
+
+
+
+**B. Community Structure in Networks**
 
 Community find dense subgraphs in directed or undirected graphs
 
