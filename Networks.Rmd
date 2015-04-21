@@ -227,7 +227,7 @@ plot(fit4)
 ```{r visualize}
 g <- adj_mtx_g
 set.seed(12)
-l <- layout.kamada.kawai(g)
+
 # shape: earlier than 2006 as "circle", later as "rectangle"
 V(g)[V(g)$yelping_since<2006]$shape <- "circle"
 V(g)[V(g)$yelping_since>2005]$shape <- "square"
@@ -243,9 +243,13 @@ V(g)$size <- sqrt(V(g)$fans)/2
 V(g)$label.cex <- 2^(V(g)$average_stars)/15
 
 
-plot(g,layout=l)
+
 plot(g,layout=layout.random)
+plot(g,layout=layout.circle)
+plot(g,layout=layout.sphere)
+plot(g,layout=layout.reingold.tilford)
 plot(g,layout=layout.fruchterman.reingold)
+plot(g, layout=layout.spring)
 tkplot(g)
 ```
 
