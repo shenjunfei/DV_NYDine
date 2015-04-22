@@ -310,7 +310,7 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 
 Use the hierachical clustering method:
 
-
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
 
 
 
