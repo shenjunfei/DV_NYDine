@@ -321,7 +321,7 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
     plot(hc1, main="Hierarchical Clustering of 50 businesses: euclidean distance",cex=.65)
 
 
-<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_euclidean.png" width="1800" height="400">
 
 * Base on Jaccard Index 
 
@@ -334,7 +334,7 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
     hc2$labels <- refer
     plot(hc2, main="Hierarchical Clustering of 50 businesses: jaccard index",cex=.65)
 
-<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_jaccard.png" width="1800" height="400">
 
 * Bootstrap: Hierarchical Clustering with p value
 
@@ -349,7 +349,7 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 
  It provides AU (approximately unbiased) p-value as well as. BP (bootstrap probability) 
 
-<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_bootsrap.png" width="1800" height="400">
 
 
 
