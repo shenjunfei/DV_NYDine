@@ -195,6 +195,18 @@ summary(fit1)
 fit1 <- lm(data = df_ctrl,degree ~ yelping_since + votes + fans)
 summary(fit1)
 plot(fit1)
+plot(fit1$fitted.values,df_ctrl$degree)
+
+r <- fit1$residuals
+left <- min(r)
+right <- max(r)
+diff <- (right - left)/10
+left <- left - diff
+right <- right + diff
+breaks <- seq(left, right, diff)
+hist(r, breaks,main="Histogram of residuals",xlab = "residuals",las=1)
+par(new=TRUE)   
+plot(density(r), col=2,xlim=c(left,right), yaxt="n", xaxt="n",bty='n', xlab="", ylab="", main='')
 
 ```
 
@@ -204,6 +216,17 @@ summary(fit2)
 fit2 <- lm(data = df_ctrl,closeness ~ votes  + fans +yelping_since+ review_count + compliments)
 summary(fit2)
 plot(fit2)
+
+r <- fit2$residuals
+left <- min(r)
+right <- max(r)
+diff <- (right - left)/10
+left <- left - diff
+right <- right + diff
+breaks <- seq(left, right, diff)
+hist(r, breaks,main="Histogram of residuals",xlab = "residuals",las=1)
+par(new=TRUE)   
+plot(density(r), col=2,xlim=c(left,right), yaxt="n", xaxt="n",bty='n', xlab="", ylab="", main='')
 ```
 
 ```{r regression 3}
@@ -212,6 +235,17 @@ summary(fit3)
 fit3 <- lm(data = df_ctrl,betweenness ~  fans + yelping_since + votes + compliments)
 summary(fit3)
 plot(fit3)
+
+r <- fit3$residuals
+left <- min(r)
+right <- max(r)
+diff <- (right - left)/10
+left <- left - diff
+right <- right + diff
+breaks <- seq(left, right, diff)
+hist(r, breaks,main="Histogram of residuals",xlab = "residuals",las=1)
+par(new=TRUE)   
+plot(density(r), col=2,xlim=c(left,right), yaxt="n", xaxt="n",bty='n', xlab="", ylab="", main='')
 ```
 
 ```{r regression 4}
@@ -221,6 +255,16 @@ fit4 <- lm(data = df_ctrl,eigenvector ~ fans +yelping_since+ votes + review_coun
 summary(fit4)
 plot(fit4)
 
+r <- fit4$residuals
+left <- min(r)
+right <- max(r)
+diff <- (right - left)/10
+left <- left - diff
+right <- right + diff
+breaks <- seq(left, right, diff)
+hist(r, breaks,main="Histogram of residuals",xlab = "residuals",las=1)
+par(new=TRUE)   
+plot(density(r), col=2,xlim=c(left,right), yaxt="n", xaxt="n",bty='n', xlab="", ylab="", main='')
 ```
 
 

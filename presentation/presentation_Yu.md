@@ -1,11 +1,13 @@
 
 ---
+
 title: "Final Project Presentation - network and clustering"
 author: "Yu Tian"
 date: "Thursday, April 23, 2015"
 output: html_document
 layout: post
 description: Final Project
+
 ---
 
 
@@ -15,12 +17,12 @@ Learn about Yelp Users and Businesses
 # Overview
 **Yelp user:**
 
-    * Overall Network
-    * Ego Network
+* Overall Network
+* Ego Network
 
 **Yelp business:**
 
-    * Hierarchical Clustering
+* Hierarchical Clustering
 
 
 # I. People on Yelp
@@ -57,16 +59,16 @@ Information includes:
 
 9) **friends:** who is the user befriend with 
 
-### - Network Density
+### 1.1.1 Network Density
 
 0.1363272
 
-### - Ugly Network Representation... 
+### 1.1.2 Ugly Network Representation... 
 
 <img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/network_v0.png" width="500" height="400">
 
 
-### - Do better? 
+### 1.1.3 Do better? 
 **A. Add Some Attributes**
 
 Do it in R:
@@ -175,7 +177,7 @@ IT works by labeling the vertices with unique labels and then updating the label
 
 ##  1.2 Ego Network
 
-### - Centrality Measures
+### 1.2.1 Centrality Measures
 
 
 1) **Degree Centrality**
@@ -211,11 +213,15 @@ PageRank )
     eigen <- evcent(adj_mtx_g,directed = F)
 
 
-**Covariances between the centrality measures**
+### 1.2.1 Covariances between centrality measures
 
-* Matrix
+* Covariances Matrix
 
-<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/Covariance_Matrix.png" width="500" height="400">
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/Covariance_Matrix.png" width="600" height="200">
+
+
+
+### 1.2.2 Centrality measures and Attributes
 
 * Degree Measures with Attributes
 
@@ -239,6 +245,21 @@ PageRank )
 * All Measures with Attributes
 
 <img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/matrices_all.png" width="600" height="400">
+
+### 1.2.3 Regression Results
+
+* degree ~ yelping_since + votes + fans
+
+
+* betweenness ~  fans + yelping_since + votes + compliments
+
+
+* closeness ~ votes  + fans +yelping_since+ review_count + compliments
+
+
+* eigenvector ~ fans +yelping_since+ votes + review_count + compliments
+
+
 
 # II. Businesses on Yelp
 
