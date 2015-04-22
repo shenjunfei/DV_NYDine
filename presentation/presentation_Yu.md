@@ -279,6 +279,8 @@ PageRank )
 
 Python [script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/clustering_business.py) for getting business-feature matrix.
 
+R [script]() for data analysis and visualizaion.
+
 50 restaurants sampled from Yelp Academic Dataset.
 
 ### 2.1.1 Features describe a business
@@ -308,13 +310,46 @@ Python [script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/cluster
 
 We ended up having 50 observarions that each one of them is a 102-dimensional binary vector.
 
-Use the hierachical clustering method:
+**Hierachical Clustering**
+
+* Base on euclidean distance
+
+    # euclidean distance
+    d1 <- dist(as.matrix(features_mtx[,c(-1,-2)]))
+    hc1 <- hclust(d1) 
+    hc1$labels <- refer
+    plot(hc1, main="Hierarchical Clustering of 50 businesses: euclidean distance",cex=.65)
+
 
 <img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
 
+* Base on Jaccard Index 
+
+    # jaccard index
+    install.packages("vegan")
+    library(vegan)
+    
+    d2<-vegdist(features_mtx,method="jaccard")
+    hc2 <- hclust(d2)
+    hc2$labels <- refer
+    plot(hc2, main="Hierarchical Clustering of 50 businesses: jaccard index",cex=.65)
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
+
+* Bootstrap: Hierarchical Clustering with p value
+
+    # Bootstrap
+    install.packages("pvclust")
+    library(pvclust)
+
+    result <- pvclust(t(features_mtx), method.dist="binary", method.hclust="ward.D", nboot=1000)
+    result[[1]]$labels <- refer
+    plot(result, main="Hierarchical Clustering of 50 businesses: Bootstrap",cex=.65)
 
 
+ It provides AU (approximately unbiased) p-value as well as. BP (bootstrap probability) 
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering.png" width="1800" height="400">
 
 
 
