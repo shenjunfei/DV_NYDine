@@ -279,13 +279,14 @@ PageRank )
 
 Python [script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/clustering_business.py) for getting business-feature matrix.
 
-R [script]() for data analysis and visualizaion.
+R [script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/hierarchical_clustering.R) for data analysis and visualizaion.
 
 50 restaurants sampled from Yelp Academic Dataset.
 
 ### 2.1.1 Features describe a business
 
 * categories:
+
     u'Drive-Thru', u'Alcohol', u'Noise Level', u'Music', u'Has TV', u'Attire', u'Ambience', u'Good for Kids', 
     u'Price Range', u'BYOB', u'Good For Dancing', u'Delivery', u'Coat Check', u'Smoking', u'Accepts Credit Cards', 
     u'BYOB/Corkage', u'Take-out', u'Corkage', u'Happy Hour', u'Wheelchair Accessible', u'Outdoor Seating', 
@@ -293,6 +294,7 @@ R [script]() for data analysis and visualizaion.
     u'By Appointment Only', u'Good For Kids', u'Good For Groups'
 
 * attributes:
+
     u'Hardware Stores', u'American (New)', u'Coffee & Tea', u'Knitting Supplies', u'Breweries', u'Trainers', 
     u'Breakfast & Brunch', u'Orthodontists', u'Transportation', u'Fast Food', u'Building Supplies', 
     u'Electronics', u'Nurseries & Gardening', u'Home Services', u'Airport Shuttles', u'Pizza', 
@@ -313,6 +315,8 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 **Hierachical Clustering**
 
 * Base on euclidean distance
+    
+Do it in R:
 
     # euclidean distance
     d1 <- dist(as.matrix(features_mtx[,c(-1,-2)]))
@@ -324,6 +328,8 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 <img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_euclidean.png" width="1800" height="400">
 
 * Base on Jaccard Index 
+
+Do it in R, use "vegan" package:
 
     # jaccard index
     install.packages("vegan")
@@ -338,6 +344,8 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 
 * Bootstrap: Hierarchical Clustering with p value
 
+Do it in R, use "pvclust" package:
+
     # Bootstrap
     install.packages("pvclust")
     library(pvclust)
@@ -349,7 +357,7 @@ We ended up having 50 observarions that each one of them is a 102-dimensional bi
 
  It provides AU (approximately unbiased) p-value as well as. BP (bootstrap probability) 
 
-<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_bootsrap.png" width="1800" height="400">
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/clustering_bootstrap.png" width="1800" height="400">
 
 
 
