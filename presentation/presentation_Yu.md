@@ -1,13 +1,11 @@
 
 ---
-
 title: "Final Project Presentation - network and clustering"
 author: "Yu Tian"
 date: "Thursday, April 23, 2015"
 output: html_document
 layout: post
 description: Final Project
-
 ---
 
 
