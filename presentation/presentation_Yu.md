@@ -29,7 +29,7 @@ Learn about Yelp Users and Businesses
 
 Notes: check out R package [igragh](http://igraph.org/)
 
-See [My code](https://github.com/YuTian9/DV_NYDine/blob/master/Networks.Rmd) for network analysis and visualization.
+See [Python script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/yelp_usr_network_getdata.py) for getting network data and [R script](https://github.com/YuTian9/DV_NYDine/blob/master/Networks.Rmd) for network analysis and visualization.
 
 ##  1.1 Overall Network
 
@@ -250,18 +250,72 @@ PageRank )
 
 * degree ~ yelping_since + votes + fans
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/lm_degree_summary.png" width="500" height="400">
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/hist_degree.png" width="500" height="400">
+
 
 * betweenness ~  fans + yelping_since + votes + compliments
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/lm_betweenness_summary.png" width="500" height="400">
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/hist_betweenness.png" width="500" height="400">
 
 * closeness ~ votes  + fans +yelping_since+ review_count + compliments
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/lm_closeness_summary.png" width="500" height="400">
+
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/hist_closeness.png" width="500" height="400">
 
 * eigenvector ~ fans +yelping_since+ votes + review_count + compliments
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/lm_eigenvector_summary.png" width="500" height="400">
 
+<img src="https://raw.githubusercontent.com/YuTian9/DV_NYDine/master/fig/hist_eigenvector.png" width="500" height="400">
 
 # II. Businesses on Yelp
 
 ##  2.1 Hierarchical Clustering
+
+Python [script](https://github.com/YuTian9/DV_NYDine/blob/master/scripts/clustering_business.py) for getting business-feature matrix.
+
+50 restaurants sampled from Yelp Academic Dataset.
+
+### 2.1.1 Features describe a business
+
+* categories:
+    u'Drive-Thru', u'Alcohol', u'Noise Level', u'Music', u'Has TV', u'Attire', u'Ambience', u'Good for Kids', 
+    u'Price Range', u'BYOB', u'Good For Dancing', u'Delivery', u'Coat Check', u'Smoking', u'Accepts Credit Cards', 
+    u'BYOB/Corkage', u'Take-out', u'Corkage', u'Happy Hour', u'Wheelchair Accessible', u'Outdoor Seating', 
+    u'Takes Reservations', u'Waiter Service', u'Wi-Fi', u'Caters', u'Order at Counter', u'Good For', u'Parking', 
+    u'By Appointment Only', u'Good For Kids', u'Good For Groups'
+
+* attributes:
+    u'Hardware Stores', u'American (New)', u'Coffee & Tea', u'Knitting Supplies', u'Breweries', u'Trainers', 
+    u'Breakfast & Brunch', u'Orthodontists', u'Transportation', u'Fast Food', u'Building Supplies', 
+    u'Electronics', u'Nurseries & Gardening', u'Home Services', u'Airport Shuttles', u'Pizza', 
+    u'Internet Service Providers', u'Shopping', u'Department Stores', u'Food', u'Automotive', u'Swimming Pools', 
+    u'Fitness & Instruction', u'Sewing & Alterations', u'Pubs', u'Books, Mags, Music & Video', u'Mini Golf', 
+    u'Home & Garden', u'Lounges', u'Contractors', u'Italian', u'Shoe Stores', u'Hotels & Travel', u'Body Shops', 
+    u'Grocery', u'Cafes', u'General Dentistry', u'Hobby Shops', u'Arts & Entertainment', u'Doctors', u'Gyms', 
+    u'Irish', u'Local Services', u'Burgers', u'Food Delivery Services', u'Lingerie', u'Nightlife', u'Bookstores', 
+    u'Dentists', u'Comedy Clubs', u'Asian Fusion', u'Restaurants', u'Bars', u'Fashion', u'Golf', u'Limos', 
+    u'Chinese', u'Auto Repair', u'American (Traditional)', u'Mattresses', u'Gluten-Free', u'Arts & Crafts', 
+    u'Active Life', u'Mobile Phones', u'Health & Medical', u'Periodontists', u'Arcades', 
+    u'Videos & Video Game Rental', u'Professional Services', u'Event Planning & Services', u'Hotels'
+
+
+
+We ended up having 50 observarions that each one of them is a 102-dimensional binary vector.
+
+Use the hierachical clustering method:
+
+
+
+
+
+
+
+
+
 
