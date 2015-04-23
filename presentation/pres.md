@@ -173,7 +173,8 @@ Topic 5: pho, spring, vietnamese, rolls, vegas, san, broth, mi, best, bowl
 
 **Get topic proportion for every star**
 
-```# Process a review set by stripping non-alphabetical characters and removing stopwords
+```
+# Process a review set by stripping non-alphabetical characters and removing stopwords
 def process_reviews(dirty_data_set):
     clean_data_set = []
     for review in dirty_data_set:
