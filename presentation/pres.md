@@ -220,7 +220,7 @@ Topic distribution for 4-star reviews in test set:  [95, 1176, 2389, 7, 119, 116
 ```
 
 **Visualize topic proportion for every star by shiny:**
-![wordcloud](https://cloud.githubusercontent.com/assets/10662777/7301460/c37b118e-e9b0-11e4-9d67-8a95394cb60e.png)
+![wordcloud](https://cloud.githubusercontent.com/assets/10662777/7301460/c37b118e-e9b0-11e4-9d67-8a95394cb60e.png =150x100)
 
 #####[To wordcloud shinyapps](https://claire-yl3296-presentation.shinyapps.io/wordcloud/)
 * Given each star, we can clearly see the key words.
