@@ -308,12 +308,12 @@ fluidPage(
 )
 
 ```
-[dist](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/dist.png)
-[bar1](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar1.png)
-[bar2](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar2.png)
-[bar3](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar3.png)
-[bar4](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar4.png)
-[bar5](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar5.png)
+![dist](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/dist.png)
+![bar1](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar1.png)
+![bar2](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar2.png)
+![bar3](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar3.png)
+![bar4](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar4.png)
+![bar5](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/bar5.png)
 
 **Visualize network:**
 ![network](https://github.com/shenjunfei/DV_NYDine/blob/master/fig/net2.png)
